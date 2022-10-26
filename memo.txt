@@ -1,3 +1,9 @@
 Data is outside as a whole folder, including all separated files, like this: 
 
 https://docs.google.com/document/d/16VDLJEGemuq2eQJf9GxiRxEMrxYXtBB0tYnDbiTR93s/edit?usp=sharing
+
+https://juejin.cn/post/7085219098501578783
+
+from google.colab import drive
+drive.mount('/content/drive')
+!git clone https://github.com/SALT-NLP/positive-frames.git
