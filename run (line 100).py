@@ -1,12 +1,3 @@
-#!pip install sentence_transformers
-#!pip install sacrebleu
-#!pip install --upgrade bleu
-#!pip install rouge
-#!pip install datasets
-#!pip install rouge_score
-#%tensorflow_version 1.x (not required any more)
-#!pip install -q gpt-2-simple
-
 import argparse
 import pandas as pd
 import numpy as np
@@ -29,7 +20,7 @@ def parse_args():
     parser.add_argument('--dev', default='data/wholedev.csv')
     parser.add_argument('--test', default='data/wholetest.csv')
     parser.add_argument('--output_dir', type=str, default='output/')
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
     return args
 
 #Retrieval
@@ -105,7 +96,8 @@ def run_bart_unconstrained():
         save_total_limit=3,
         num_train_epochs=5,
         predict_with_generate=True,
-        fp16=True,
+        #fp16=True,
+        
     )
     data_collator = DataCollatorForSeq2Seq(tokenizer, model=model)
     def compute_metrics(eval_pred):
