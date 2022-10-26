@@ -96,7 +96,7 @@ def run_bart_unconstrained():
         save_total_limit=3,
         num_train_epochs=5,
         predict_with_generate=True,
-        #fp16=True,
+        fp16=True,
         
     )
     data_collator = DataCollatorForSeq2Seq(tokenizer, model=model)
