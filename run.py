@@ -1,3 +1,12 @@
+#!pip install sentence_transformers
+#!pip install sacrebleu
+#!pip install --upgrade bleu
+#!pip install rouge
+#!pip install datasets
+#!pip install rouge_score
+#%tensorflow_version 1.x (not required any more)
+#!pip install -q gpt-2-simple
+
 import argparse
 import pandas as pd
 import numpy as np
