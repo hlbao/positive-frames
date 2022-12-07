@@ -13,3 +13,4 @@ The whole test data (instead 10 short sentences I use) is [here](https://github.
 ```
 decoded_preds_joined = ["\n stop".join(nltk.sent_tokenize(pred.strip())) for pred in decoded_preds]
 ```
+Open to discussion.
